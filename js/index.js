@@ -89,8 +89,12 @@ contactParagraph[2].textContent = siteContent.contact.email;
 
 footer.textContent = siteContent.footer.copyright;
 
-Array = from(navigation);
-for (let i = 0; i > navigation.length; i++) {
-  navigation[i].style.color = "green";
-}
+navigation.forEach(a => {
+  a.style.color = "green"
+});
 
+let myNewItems = document.createElement("a");
+myNewItems.textContent = "Log in";
+
+let nav = querySelector("nav");
+nav.appendChild(myNewItems);
