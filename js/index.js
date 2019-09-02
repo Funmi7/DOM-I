@@ -90,11 +90,19 @@ contactParagraph[2].textContent = siteContent.contact.email;
 footer.textContent = siteContent.footer.copyright;
 
 navigation.forEach(a => {
-  a.style.color = "green"
+  a.style.color = "green";
 });
 
-let myNewItems = document.createElement("a");
-myNewItems.textContent = "Log in";
+let myNewItem1 = document.createElement("a");
+myNewItem1.textContent = "Log in";
+myNewItem1.setAttribute("href", "#" );
+myNewItem1.style.color = "green";
 
-let nav = querySelector("nav");
-nav.appendChild(myNewItems);
+let myNewItem2 = document.createElement("a");
+myNewItem2.textContent = "Home";
+myNewItem2.setAttribute("href", "#" );
+myNewItem2.style.color = "green";
+
+let nav = document.querySelector("nav");
+nav.appendChild(myNewItem1);
+nav.prepend(myNewItem2);
